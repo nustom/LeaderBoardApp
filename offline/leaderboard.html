@@ -8,11 +8,26 @@
     <script src="./js/datastorage.js" ></script>
     <script src="./js/data.js" ></script>
     <script src="./js/leaderboard.js" ></script>
-    <!-- Running script -->
-    <script src="./js/core.js" ></script>
-    <link href="./css/leaderboard.css" />
+    
+    <!-- CSS-->
+    <link href="./css/leaderboard.css" rel='stylesheet'/>
   </head>
   <body>
     <h1>LeaderBoard</h1>
+    <div id="leaderboard-wrapper"></div>
+
+    <script id="leaderboard-template" type="text/x-handlebars-template">
+      {{#each people}}
+        <div class='leaderboard-item'>
+          <div>{{this.position}}</div>
+          <div style="background-color: {{this.car_colour}}">{{this.car_number}}</div>
+          <div>{{this.driver_name}}</div>
+          <div>{{this.last_lap}}</div>
+        </div>
+      {{/each}}
+    </script>  
+
+    <!-- Running script -->
+    <script src="./js/core.js" ></script>
   </body>  
 </html>
