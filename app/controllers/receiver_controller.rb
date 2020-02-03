@@ -2,8 +2,7 @@ class ReceiverController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :verify_token
   before_action :init_service
-  # GET /receiver/leaderboard/:token
-  # GET /receiver/leaderboard/:token.json
+  # POST /receiver/leaderboard/:token
   # Parameters:
   #  - token: Query parameter (string)
   #  - leaderboard: Body parameter (object)
@@ -13,7 +12,7 @@ class ReceiverController < ApplicationController
   end  
 private
   def verify_token
-    if !(params[:token].present? && params[:token] == "FT7E3Y68UPA6")
+    if !(params[:token].present? && params[:token] == LEADERBOARD_TOKEN)
       render json: {success: false}
     end
   end  

@@ -1,0 +1,2 @@
+LEADERBOARD_TOKEN = "FT7E3Y68UPA6"
+WEBSOCKET_TOKEN = "offline_only_token"
