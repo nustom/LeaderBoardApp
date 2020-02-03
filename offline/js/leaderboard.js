@@ -1,18 +1,15 @@
 //Core class
 class LeaderBoard {
   constructor(){
-    this.cable = ActionCable.createConsumer("ws://localhost:3000/cable");
+    this.dataStorage = new DataStorage();
   }
-  setup(){
-    this.listenLeaderboard();  
+  refreshDashboard(){
+    setInterval(this.renderDashboard.bind(this), 1000)
+    
   }
 
-  listenLeaderboard(){
-    this.cable.subscriptions.create("LeaderboardChannel", {
-      received: function(data){
-        console.log("==========");
-        console.log(data);
-      }
-    });
+  renderDashboard(){
+    var data = this.dataStorage.get(data);
   }
+
 }
