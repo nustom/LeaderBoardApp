@@ -1,0 +1,4 @@
+//Core class
+class LeaderBoard {
+
+}
