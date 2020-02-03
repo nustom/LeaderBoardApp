@@ -7,7 +7,7 @@ class LeaderBoard {
 
   }
   refreshDashboard(){
-    setInterval(this.renderDashboard.bind(this), 1000);
+    setInterval(this.renderDashboard.bind(this), REFRESH_TIMEOUT);
     
   }
 

@@ -1,7 +1,7 @@
 //Handler leaderboard data
 class Data {
   constructor(){
-    this.cable = ActionCable.createConsumer("ws://localhost:3000/cable");
+    this.cable = ActionCable.createConsumer(WEBSOCKET_ENDPOINT);
     this.dataStorage = new DataStorage();
   }
 

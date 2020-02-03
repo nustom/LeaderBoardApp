@@ -7,7 +7,7 @@ class DataStorage {
   get(){
     data = JSON.parse(localStorage.getItem(this.key));
     data.forEach(function(item){
-      item.last_lap = parseFloat(item.last_lap).toFixed(2);
+      item.last_lap = parseFloat(item.last_lap).toFixed(3);
     });
 
     data.sort(function(a,b){

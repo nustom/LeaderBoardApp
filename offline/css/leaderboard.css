@@ -1,0 +1,48 @@
+body {
+  background: black;
+  color: white;
+  max-width: 360px;
+  margin: auto;
+  text-transform: uppercase;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lastlap-intro {
+  background-color: #0363BC;
+  text-align: right;  
+  padding: 5px;
+}
+
+.leaderboard-item {
+  padding: 5px;
+}
+
+.leaderboard-item > div{
+  display: inline-block;
+  line-height: 30px;
+}
+
+.leaderboard-item .position{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.leaderboard-item .car_number {
+  width: 30px;
+  height: 30px;
+  text-align: center; 
+}
+
+.leaderboard-item .name {
+  width: calc(100% - 125px);
+}
+
+.leaderboard-item .lastlap {
+  text-align: right;
+  width: 50px;
+}

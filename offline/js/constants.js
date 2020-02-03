@@ -1,0 +1,2 @@
+WEBSOCKET_ENDPOINT = "ws://localhost:3000/cable"
+REFRESH_TIMEOUT = 1000
